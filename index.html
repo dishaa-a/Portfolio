@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Disha Chaudhary — B.Tech CSE (Artificial Intelligence) undergraduate specializing in AI, Machine Learning, Data Science, Generative AI and RAG.">
+        content="Disha Chaudhary - B.Tech CSE Artificial Intelligence undergraduate specializing in AI, Machine Learning, Data Science and Generative AI.">
 
     <meta name="keywords"
-        content="Disha Chaudhary, AI ML, Machine Learning, Data Science, Artificial Intelligence, GenAI, RAG, Python, Portfolio">
+        content="Disha Chaudhary, AI, Machine Learning, Data Science, Artificial Intelligence, GenAI, RAG, Python">
 
     <meta name="author" content="Disha Chaudhary">
 
-    <title>Disha Chaudhary | AI/ML & Data Science Undergraduate</title>
+    <title>Disha Chaudhary | AI/ML & Data Science</title>
 
     <style>
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
         * {
             margin: 0;
             padding: 0;
@@ -28,509 +34,863 @@
 
         body {
             font-family: "Inter", "Segoe UI", Arial, sans-serif;
-            background: #070b14;
-            color: #e8edf7;
+            background: #f8fafc;
+            color: #172033;
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
         a {
-            color: inherit;
             text-decoration: none;
+            color: inherit;
         }
 
-        /* ================= NAVBAR ================= */
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
 
         nav {
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(7, 11, 20, 0.82);
+
+            background: rgba(255, 255, 255, 0.88);
             backdrop-filter: blur(14px);
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+
+            border-bottom: 1px solid #e7eaf0;
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1180px;
             margin: auto;
-            padding: 18px 30px;
+
+            padding: 17px 30px;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
         .logo {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 800;
-            color: #ffffff;
-            letter-spacing: 0.5px;
+            color: #172033;
         }
 
         .logo span {
-            color: #64d8ff;
+            color: #4f7cff;
         }
 
         .nav-links {
             display: flex;
-            gap: 28px;
+            gap: 30px;
             list-style: none;
         }
 
         .nav-links a {
-            color: #aeb9ca;
+            color: #667085;
             font-size: 14px;
-            transition: 0.3s;
+            font-weight: 500;
+
+            transition: 0.25s;
         }
 
         .nav-links a:hover {
-            color: #64d8ff;
+            color: #4f7cff;
         }
 
-        /* ================= HERO ================= */
+
+        /* =====================================================
+           HERO
+        ===================================================== */
 
         .hero {
             min-height: 100vh;
-            position: relative;
+
+            padding: 135px 30px 90px;
+
             display: flex;
             align-items: center;
-            padding: 120px 30px 80px;
+
+            position: relative;
+
             overflow: hidden;
-        }
 
-        #networkCanvas {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
             background:
-                radial-gradient(circle at 70% 30%, rgba(63, 180, 255, 0.09), transparent 35%),
-                linear-gradient(180deg, rgba(7,11,20,0.25), #070b14);
-            z-index: 1;
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(112, 144, 255, 0.15),
+                    transparent 28%
+                ),
+
+                radial-gradient(
+                    circle at 10% 80%,
+                    rgba(176, 125, 255, 0.10),
+                    transparent 25%
+                ),
+
+                #f8fafc;
         }
+
 
         .hero-container {
-            max-width: 1200px;
-            margin: auto;
+            max-width: 1180px;
             width: 100%;
+
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+
+            gap: 80px;
+
+            align-items: center;
+
             position: relative;
             z-index: 2;
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 70px;
-            align-items: center;
         }
 
+
         .hero-kicker {
-            color: #64d8ff;
+            color: #4f7cff;
+
             font-family: monospace;
+
             font-size: 14px;
+
+            font-weight: 600;
+
             margin-bottom: 18px;
         }
 
+
         .hero h1 {
-            font-size: clamp(48px, 7vw, 86px);
-            line-height: 1;
-            margin-bottom: 22px;
-            letter-spacing: -3px;
+            font-size: clamp(52px, 7vw, 86px);
+
+            line-height: 0.98;
+
+            letter-spacing: -4px;
+
+            color: #111827;
+
+            margin-bottom: 25px;
         }
 
+
+        .hero h1 span {
+            color: #4f7cff;
+        }
+
+
         .tagline {
-            font-size: 23px;
-            color: #c3ccda;
+            font-size: 24px;
+
+            font-weight: 600;
+
+            color: #344054;
+
             max-width: 720px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero-description {
+            font-size: 16px;
+
+            color: #667085;
+
+            max-width: 690px;
+
             margin-bottom: 30px;
         }
 
-        .hero-description {
-            color: #8996aa;
-            max-width: 700px;
-            font-size: 16px;
-            margin-bottom: 35px;
-        }
+
+        /* =====================================================
+           BUTTONS
+        ===================================================== */
 
         .hero-buttons {
             display: flex;
-            gap: 15px;
+
+            gap: 14px;
+
             flex-wrap: wrap;
+
+            margin-bottom: 28px;
         }
+
 
         .btn {
             padding: 13px 22px;
-            border-radius: 8px;
-            font-weight: 700;
+
+            border-radius: 9px;
+
             font-size: 14px;
+
+            font-weight: 700;
+
             transition: 0.3s;
-            display: inline-block;
         }
 
+
         .btn-primary {
-            background: #64d8ff;
-            color: #061018;
+            background: #4f7cff;
+
+            color: white;
+
+            box-shadow: 0 8px 22px rgba(79, 124, 255, 0.22);
         }
+
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(100,216,255,0.2);
+
+            box-shadow: 0 12px 30px rgba(79, 124, 255, 0.30);
         }
+
 
         .btn-secondary {
-            border: 1px solid rgba(255,255,255,0.15);
-            color: #d9e1ed;
-            background: rgba(255,255,255,0.03);
+            background: white;
+
+            color: #344054;
+
+            border: 1px solid #dfe4ec;
         }
+
 
         .btn-secondary:hover {
-            border-color: #64d8ff;
-            color: #64d8ff;
+            border-color: #4f7cff;
+
+            color: #4f7cff;
         }
 
-        /* ================= PROFILE ================= */
 
-        .profile-card {
-            display: flex;
-            justify-content: center;
-        }
-
-        .profile-image-wrapper {
-            width: 310px;
-            height: 310px;
-            border-radius: 50%;
-            padding: 5px;
-            background: linear-gradient(135deg, #64d8ff, #9b6cff, #64d8ff);
-            box-shadow: 0 0 70px rgba(100,216,255,0.15);
-        }
-
-        .profile-image {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 6px solid #070b14;
-        }
-
-        /* ================= CONTACT ROW ================= */
+        /* =====================================================
+           CONTACT
+        ===================================================== */
 
         .contact-row {
             display: flex;
+
             flex-wrap: wrap;
-            gap: 14px;
-            margin-top: 30px;
+
+            gap: 10px;
         }
+
 
         .contact-item {
-            padding: 9px 13px;
-            border: 1px solid rgba(255,255,255,0.09);
-            background: rgba(255,255,255,0.025);
+            padding: 8px 12px;
+
+            background: white;
+
+            border: 1px solid #e6eaf0;
+
             border-radius: 7px;
-            color: #aab6c8;
-            font-size: 13px;
-            transition: 0.3s;
+
+            color: #667085;
+
+            font-size: 12px;
+
+            transition: 0.25s;
         }
+
 
         .contact-item:hover {
-            color: #64d8ff;
-            border-color: rgba(100,216,255,0.4);
+            color: #4f7cff;
+
+            border-color: #b9c8ff;
+
+            transform: translateY(-2px);
         }
 
-        /* ================= GENERAL ================= */
+
+        /* =====================================================
+           PROFILE IMAGE
+        ===================================================== */
+
+        .profile-card {
+            display: flex;
+
+            justify-content: center;
+
+            position: relative;
+        }
+
+
+        .profile-image-wrapper {
+            width: 350px;
+
+            height: 430px;
+
+            padding: 7px;
+
+            border-radius: 28px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #dce6ff,
+                    #ffffff,
+                    #eee5ff
+                );
+
+            box-shadow:
+                0 25px 70px rgba(40, 54, 85, 0.15);
+        }
+
+
+        .profile-image {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            object-position: center;
+
+            border-radius: 23px;
+
+            border: 5px solid white;
+        }
+
+
+        /* =====================================================
+           SECTIONS
+        ===================================================== */
 
         section {
             padding: 100px 30px;
         }
 
+
         .section-container {
             max-width: 1100px;
+
             margin: auto;
         }
 
+
         .section-label {
-            color: #64d8ff;
+            color: #4f7cff;
+
             font-family: monospace;
+
             font-size: 13px;
-            margin-bottom: 10px;
+
+            font-weight: 600;
+
+            margin-bottom: 9px;
         }
+
 
         .section-title {
             font-size: 42px;
+
+            line-height: 1.15;
+
+            letter-spacing: -1.5px;
+
+            color: #172033;
+
             margin-bottom: 45px;
-            letter-spacing: -1px;
         }
 
-        .section-description {
-            color: #9ca8ba;
-            max-width: 850px;
-            font-size: 17px;
-        }
 
-        /* ================= ABOUT ================= */
+        /* =====================================================
+           ABOUT
+        ===================================================== */
 
         .about-grid {
             display: grid;
+
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
+
+            gap: 25px;
         }
+
 
         .about-card {
-            padding: 30px;
-            background: rgba(255,255,255,0.025);
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 14px;
+            background: white;
+
+            border: 1px solid #e7eaf0;
+
+            border-radius: 15px;
+
+            padding: 32px;
+
+            box-shadow: 0 10px 30px rgba(20, 30, 50, 0.04);
         }
+
 
         .about-card h3 {
-            margin-bottom: 15px;
             font-size: 21px;
+
+            color: #172033;
+
+            margin-bottom: 15px;
         }
+
 
         .about-card p {
-            color: #9ca8ba;
-            line-height: 1.8;
+            color: #667085;
+
+            line-height: 1.85;
+
+            font-size: 15px;
         }
 
-        /* ================= EXPERIENCE ================= */
+
+        /* =====================================================
+           EXPERIENCE
+        ===================================================== */
 
         .experience-card {
+            background: white;
+
+            border: 1px solid #e7eaf0;
+
+            border-radius: 15px;
+
             padding: 32px;
-            margin-bottom: 25px;
-            border-left: 2px solid #64d8ff;
-            background: rgba(255,255,255,0.025);
-            border-radius: 0 12px 12px 0;
+
+            margin-bottom: 22px;
+
+            box-shadow: 0 10px 30px rgba(20, 30, 50, 0.04);
+
+            position: relative;
+
+            overflow: hidden;
         }
+
+
+        .experience-card::before {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            top: 0;
+
+            width: 4px;
+
+            height: 100%;
+
+            background: linear-gradient(
+                #4f7cff,
+                #9b7cff
+            );
+        }
+
 
         .experience-header {
             display: flex;
+
             justify-content: space-between;
+
             gap: 20px;
+
             flex-wrap: wrap;
+
             margin-bottom: 18px;
         }
 
+
         .experience-title {
-            font-size: 22px;
+            font-size: 21px;
+
             font-weight: 700;
+
+            color: #172033;
         }
+
 
         .company {
-            color: #64d8ff;
-            margin-top: 5px;
+            color: #4f7cff;
+
+            font-weight: 600;
+
+            margin-top: 4px;
         }
 
+
         .date {
-            color: #7f8ca0;
-            font-size: 14px;
+            color: #98a2b3;
+
+            font-size: 13px;
         }
+
 
         .experience-card ul {
             padding-left: 20px;
-            color: #a7b2c2;
+
+            color: #667085;
         }
+
 
         .experience-card li {
-            margin-bottom: 10px;
+            margin-bottom: 9px;
         }
 
-        /* ================= PROJECTS ================= */
+
+        /* =====================================================
+           PROJECTS
+        ===================================================== */
 
         .projects-grid {
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 22px;
         }
 
+
         .project-card {
+            background: white;
+
+            border: 1px solid #e7eaf0;
+
+            border-radius: 15px;
+
             padding: 28px;
-            border: 1px solid rgba(255,255,255,0.08);
-            background: rgba(255,255,255,0.025);
-            border-radius: 13px;
-            transition: 0.3s;
+
             display: flex;
+
             flex-direction: column;
+
+            transition: 0.3s;
+
+            box-shadow: 0 10px 30px rgba(20, 30, 50, 0.04);
         }
+
 
         .project-card:hover {
             transform: translateY(-7px);
-            border-color: rgba(100,216,255,0.45);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+
+            border-color: #c7d2ff;
+
+            box-shadow:
+                0 20px 45px rgba(55, 70, 110, 0.10);
         }
 
+
         .project-number {
-            color: #64d8ff;
+            color: #4f7cff;
+
             font-family: monospace;
-            font-size: 13px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
             margin-bottom: 14px;
         }
 
+
         .project-card h3 {
             font-size: 21px;
+
             margin-bottom: 12px;
+
+            color: #172033;
         }
 
+
         .project-card p {
-            color: #939fb0;
+            color: #667085;
+
             font-size: 14px;
+
+            line-height: 1.75;
+
             flex: 1;
         }
 
+
         .tech-stack {
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 7px;
+
             margin: 20px 0;
         }
 
+
         .tech {
-            padding: 5px 8px;
-            background: rgba(100,216,255,0.07);
-            color: #8edfff;
-            border-radius: 5px;
+            padding: 5px 9px;
+
+            background: #f0f4ff;
+
+            color: #4f67b7;
+
+            border-radius: 6px;
+
             font-size: 11px;
+
+            font-weight: 600;
         }
 
+
         .project-link {
-            color: #64d8ff;
+            color: #4f7cff;
+
             font-size: 13px;
+
             font-weight: 700;
         }
 
-        /* ================= SKILLS ================= */
+
+        /* =====================================================
+           SKILLS
+        ===================================================== */
 
         .skills-grid {
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 18px;
         }
 
+
         .skill-card {
+            background: white;
+
+            border: 1px solid #e7eaf0;
+
+            border-radius: 13px;
+
             padding: 24px;
-            background: rgba(255,255,255,0.025);
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 12px;
+
+            box-shadow: 0 8px 25px rgba(20, 30, 50, 0.035);
         }
+
 
         .skill-card h3 {
-            margin-bottom: 13px;
+            color: #172033;
+
             font-size: 17px;
+
+            margin-bottom: 11px;
         }
 
+
         .skill-card p {
-            color: #929eaf;
+            color: #667085;
+
             font-size: 14px;
+
             line-height: 1.8;
         }
 
-        /* ================= EDUCATION ================= */
+
+        /* =====================================================
+           EDUCATION
+        ===================================================== */
 
         .education-card {
+            background: white;
+
+            border: 1px solid #e7eaf0;
+
+            border-radius: 15px;
+
             padding: 32px;
-            background: rgba(255,255,255,0.025);
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 13px;
-            margin-bottom: 25px;
+
+            box-shadow: 0 10px 30px rgba(20, 30, 50, 0.04);
         }
 
+
         .education-card h3 {
-            font-size: 23px;
+            font-size: 22px;
+
+            color: #172033;
+
             margin-bottom: 7px;
         }
 
-        .education-card .institution {
-            color: #64d8ff;
+
+        .institution {
+            color: #4f7cff;
+
+            font-weight: 600;
+
             margin-bottom: 8px;
         }
 
+
         .education-meta {
-            color: #8e9aab;
+            color: #667085;
+
+            font-size: 14px;
         }
 
-        /* ================= CERTIFICATIONS ================= */
+
+        /* =====================================================
+           CERTIFICATIONS
+        ===================================================== */
 
         .certifications {
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 18px;
         }
 
+
         .cert-card {
-            padding: 22px;
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 10px;
-            background: rgba(255,255,255,0.025);
+            background: white;
+
+            border: 1px solid #e7eaf0;
+
+            border-radius: 12px;
+
+            padding: 23px;
+
+            box-shadow: 0 8px 25px rgba(20, 30, 50, 0.035);
         }
 
+
         .cert-card h4 {
+            color: #172033;
+
             font-size: 15px;
+
             margin-bottom: 7px;
         }
 
+
         .cert-card p {
-            color: #7f8c9e;
+            color: #98a2b3;
+
             font-size: 13px;
         }
 
-        /* ================= LOOKING FOR ================= */
+
+        /* =====================================================
+           LOOKING FOR
+        ===================================================== */
 
         .looking-card {
-            padding: 40px;
-            border-radius: 16px;
-            border: 1px solid rgba(100,216,255,0.15);
+            padding: 42px;
+
+            border-radius: 18px;
+
             background:
-                radial-gradient(circle at top right, rgba(100,216,255,0.08), transparent 35%),
-                rgba(255,255,255,0.025);
+                linear-gradient(
+                    135deg,
+                    #eef3ff,
+                    #faf8ff
+                );
+
+            border: 1px solid #dfe6ff;
         }
+
 
         .looking-card h3 {
-            font-size: 28px;
-            margin-bottom: 15px;
+            font-size: 29px;
+
+            color: #172033;
+
+            margin-bottom: 14px;
         }
+
 
         .looking-card p {
-            color: #9aa6b7;
-            max-width: 800px;
+            color: #667085;
+
+            max-width: 820px;
+
+            line-height: 1.8;
         }
 
-        /* ================= FOOTER ================= */
+
+        /* =====================================================
+           CONTACT SECTION
+        ===================================================== */
+
+        .contact-section {
+            background: #f1f5f9;
+        }
+
+
+        .section-description {
+            color: #667085;
+
+            max-width: 800px;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
 
         footer {
-            padding: 50px 30px;
-            border-top: 1px solid rgba(255,255,255,0.07);
+            padding: 35px 30px;
+
+            background: #ffffff;
+
+            border-top: 1px solid #e7eaf0;
+
             text-align: center;
-            color: #718095;
+
+            color: #98a2b3;
+
             font-size: 13px;
         }
 
+
         footer strong {
-            color: #cbd5e1;
+            color: #344054;
         }
 
-        /* ================= RESPONSIVE ================= */
 
-        @media (max-width: 900px) {
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 950px) {
 
             .hero-container {
                 grid-template-columns: 1fr;
+
                 text-align: center;
+
+                gap: 50px;
             }
+
 
             .hero-description {
                 margin-left: auto;
                 margin-right: auto;
             }
 
+
             .hero-buttons,
             .contact-row {
                 justify-content: center;
             }
 
+
             .profile-card {
                 order: -1;
             }
+
 
             .projects-grid,
             .skills-grid,
@@ -538,14 +898,17 @@
                 grid-template-columns: 1fr 1fr;
             }
 
+
             .about-grid {
                 grid-template-columns: 1fr;
             }
+
 
             .nav-links {
                 display: none;
             }
         }
+
 
         @media (max-width: 600px) {
 
@@ -553,22 +916,30 @@
                 padding: 75px 20px;
             }
 
+
             .hero {
-                padding: 110px 20px 70px;
+                padding: 115px 20px 70px;
             }
+
 
             .hero h1 {
                 font-size: 52px;
+
+                letter-spacing: -2px;
             }
+
 
             .tagline {
                 font-size: 19px;
             }
 
+
             .profile-image-wrapper {
-                width: 230px;
-                height: 230px;
+                width: 280px;
+
+                height: 350px;
             }
+
 
             .projects-grid,
             .skills-grid,
@@ -576,107 +947,184 @@
                 grid-template-columns: 1fr;
             }
 
+
             .section-title {
                 font-size: 34px;
             }
+
+
+            .looking-card {
+                padding: 28px;
+            }
+
 
             .nav-container {
                 padding: 16px 20px;
             }
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
 
     <nav>
+
         <div class="nav-container">
-            <a href="#home" class="logo">Disha<span>.</span></a>
+
+            <a href="#home" class="logo">
+                Disha<span>.</span>
+            </a>
 
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#experience">Experience</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#education">Education</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
             </ul>
+
         </div>
+
     </nav>
 
 
-    <!-- ================= HERO ================= -->
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
     <section class="hero" id="home">
 
-        <canvas id="networkCanvas"></canvas>
-        <div class="hero-overlay"></div>
-
         <div class="hero-container">
 
-            <div>
+
+            <div class="hero-content">
 
                 <p class="hero-kicker">
                     // B.Tech CSE (AI) Undergraduate — Open to Internship Opportunities
                 </p>
 
+
                 <h1>
-                    Disha<br>Chaudhary
+                    Disha<br>
+                    <span>Chaudhary</span>
                 </h1>
+
 
                 <p class="tagline">
                     AI/ML & Data Science Undergraduate building
                     intelligent, data-driven applications.
                 </p>
 
+
                 <p class="hero-description">
-                    I am a B.Tech CSE (Artificial Intelligence) undergraduate
-                    with hands-on experience in Machine Learning, Data Science,
-                    Generative AI, and application development. I enjoy turning
-                    ideas into practical solutions using predictive modeling,
-                    recommendation systems, and Retrieval-Augmented Generation.
+
+                    I am a B.Tech CSE (Artificial Intelligence)
+                    undergraduate with hands-on experience in
+                    Machine Learning, Data Science, Generative AI,
+                    and application development.
+
+                    I enjoy building practical solutions using
+                    predictive modeling, recommendation systems,
+                    and Retrieval-Augmented Generation.
+
                 </p>
+
 
                 <div class="hero-buttons">
 
-                    <a href="#projects" class="btn btn-primary">
+                    <a
+                        href="#projects"
+                        class="btn btn-primary">
+
                         View My Projects
+
                     </a>
 
-                    <a href="#contact" class="btn btn-secondary">
+
+                    <a
+                        href="#contact"
+                        class="btn btn-secondary">
+
                         Let's Connect
+
                     </a>
 
                 </div>
 
+
                 <div class="contact-row">
 
-                    <a class="contact-item"
-                       href="mailto:dishachaudhary61112@gmail.com">
-                        ✉ dishachaudhary61112@gmail.com
+                    <a
+                        href="mailto:dishachaudhary61112@gmail.com"
+                        class="contact-item">
+
+                        ✉ Email
+
                     </a>
 
-                    <a class="contact-item"
-                       href="tel:+917303573093">
+
+                    <a
+                        href="tel:+917303573093"
+                        class="contact-item">
+
                         ☎ +91 7303573093
+
                     </a>
+
 
                     <span class="contact-item">
+
                         📍 Delhi, India
+
                     </span>
 
-                    <a class="contact-item"
-                       href="https://www.linkedin.com/in/disha-chaudhary2003"
-                       target="_blank">
+
+                    <a
+                        href="https://www.linkedin.com/in/disha-chaudhary2003"
+                        target="_blank"
+                        class="contact-item">
+
                         LinkedIn
+
                     </a>
 
-                    <a class="contact-item"
-                       href="https://github.com/dishaa-a"
-                       target="_blank">
+
+                    <a
+                        href="https://github.com/dishaa-a"
+                        target="_blank"
+                        class="contact-item">
+
                         GitHub
+
                     </a>
 
                 </div>
@@ -684,16 +1132,17 @@
             </div>
 
 
+
+            <!-- PROFILE PHOTO -->
+
             <div class="profile-card">
 
                 <div class="profile-image-wrapper">
 
-                    <!-- Replace profile.jpg with your actual image filename -->
                     <img
                         src="profile.jpg"
                         alt="Disha Chaudhary"
-                        class="profile-image"
-                    >
+                        class="profile-image">
 
                 </div>
 
@@ -704,20 +1153,28 @@
     </section>
 
 
-    <!-- ================= ABOUT ================= -->
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
 
     <section id="about">
 
         <div class="section-container">
 
-            <p class="section-label">// 01 — ABOUT ME</p>
+            <p class="section-label">
+                // 01 — ABOUT ME
+            </p>
+
 
             <h2 class="section-title">
                 Building with AI,<br>
                 learning by doing.
             </h2>
 
+
             <div class="about-grid">
+
 
                 <div class="about-card">
 
@@ -726,23 +1183,31 @@
                     </h3>
 
                     <p>
+
                         I am a B.Tech CSE (Artificial Intelligence)
-                        undergraduate at Maharaja Agrasen Institute of
-                        Technology (GGSIPU), with a strong interest in
-                        Artificial Intelligence, Machine Learning, Data
-                        Science, and Generative AI.
+                        undergraduate at Maharaja Agrasen Institute
+                        of Technology (GGSIPU).
+
+                        I have a strong interest in Artificial
+                        Intelligence, Machine Learning, Data Science,
+                        and Generative AI.
+
                     </p>
 
                     <br>
 
                     <p>
-                        My academic foundation combined with internship
-                        experience has given me practical exposure to
-                        developing, evaluating, and applying machine
-                        learning models to real-world problems.
+
+                        My academic foundation and internship
+                        experience have given me practical exposure
+                        to developing, evaluating, and applying
+                        machine learning models to real-world
+                        problems.
+
                     </p>
 
                 </div>
+
 
 
                 <div class="about-card">
@@ -752,21 +1217,28 @@
                     </h3>
 
                     <p>
+
                         I have worked on predictive modeling,
                         recommendation systems, data analysis,
-                        Retrieval-Augmented Generation (RAG), LLM-based
-                        applications, and frontend development.
+                        Retrieval-Augmented Generation (RAG),
+                        LLM-based applications, and frontend
+                        development.
+
                     </p>
 
                     <br>
 
                     <p>
-                        I enjoy taking a problem from data exploration and
-                        experimentation to a functional application that
-                        users can actually interact with.
+
+                        I enjoy taking a problem from data
+                        exploration and experimentation to a
+                        functional application that users can
+                        actually interact with.
+
                     </p>
 
                 </div>
+
 
             </div>
 
@@ -775,18 +1247,26 @@
     </section>
 
 
-    <!-- ================= EXPERIENCE ================= -->
+
+    <!-- =====================================================
+         EXPERIENCE
+    ====================================================== -->
 
     <section id="experience">
 
         <div class="section-container">
 
-            <p class="section-label">// 02 — EXPERIENCE</p>
+            <p class="section-label">
+                // 02 — EXPERIENCE
+            </p>
+
 
             <h2 class="section-title">
                 Practical experience.
             </h2>
 
+
+            <!-- STACKCART -->
 
             <div class="experience-card">
 
@@ -803,6 +1283,7 @@
                         </div>
 
                     </div>
+
 
                     <div class="date">
                         May 2026 — Aug 2026
@@ -822,26 +1303,28 @@
                     <li>
                         Developed, trained, and evaluated predictive
                         models using Python, Pandas, NumPy, and
-                        Scikit-learn to generate data-driven business
-                        insights.
+                        Scikit-learn.
                     </li>
 
                     <li>
-                        Worked on data preprocessing, model development,
-                        evaluation, and iterative improvement of
-                        machine learning solutions.
+                        Worked on data preprocessing, model
+                        development, evaluation, and iterative
+                        improvement of machine learning solutions.
                     </li>
 
                     <li>
-                        Coordinated team tasks and contributed to the
-                        execution and delivery of machine learning
-                        projects.
+                        Coordinated team tasks and contributed to
+                        the execution and delivery of machine
+                        learning projects.
                     </li>
 
                 </ul>
 
             </div>
 
+
+
+            <!-- TEN -->
 
             <div class="experience-card">
 
@@ -859,6 +1342,7 @@
 
                     </div>
 
+
                     <div class="date">
                         Internship Experience
                     </div>
@@ -874,14 +1358,13 @@
                     </li>
 
                     <li>
-                        Converted
-                        <strong>4 UI/UX designs</strong>
+                        Converted <strong>4 UI/UX designs</strong>
                         into functional web interfaces.
                     </li>
 
                     <li>
-                        Improved user navigation and interaction flow
-                        by approximately <strong>20%</strong>.
+                        Improved user navigation and interaction
+                        flow by approximately <strong>20%</strong>.
                     </li>
 
                 </ul>
@@ -893,13 +1376,19 @@
     </section>
 
 
-    <!-- ================= PROJECTS ================= -->
+
+    <!-- =====================================================
+         PROJECTS
+    ====================================================== -->
 
     <section id="projects">
 
         <div class="section-container">
 
-            <p class="section-label">// 03 — PROJECTS</p>
+            <p class="section-label">
+                // 03 — PROJECTS
+            </p>
+
 
             <h2 class="section-title">
                 Things I've built.
@@ -917,37 +1406,63 @@
                         PROJECT 01
                     </div>
 
+
                     <h3>
                         YouTube RAG Chatbot
                     </h3>
 
+
                     <p>
-                        Built a Retrieval-Augmented Generation chatbot
-                        that extracts YouTube transcripts, creates
-                        embeddings, stores them in a vector database,
-                        and retrieves relevant context to answer
-                        questions about videos.
+
+                        Built a Retrieval-Augmented Generation
+                        chatbot that extracts YouTube transcripts,
+                        creates embeddings, stores them in a vector
+                        database, and retrieves relevant context to
+                        answer questions about videos.
+
                     </p>
+
 
                     <div class="tech-stack">
 
-                        <span class="tech">Python</span>
-                        <span class="tech">LangChain</span>
-                        <span class="tech">Hugging Face</span>
-                        <span class="tech">ChromaDB</span>
-                        <span class="tech">RAG</span>
-                        <span class="tech">Streamlit</span>
+                        <span class="tech">
+                            Python
+                        </span>
+
+                        <span class="tech">
+                            LangChain
+                        </span>
+
+                        <span class="tech">
+                            Hugging Face
+                        </span>
+
+                        <span class="tech">
+                            ChromaDB
+                        </span>
+
+                        <span class="tech">
+                            RAG
+                        </span>
+
+                        <span class="tech">
+                            Streamlit
+                        </span>
 
                     </div>
+
 
                     <a
                         href="https://github.com/dishaa-a"
                         target="_blank"
                         class="project-link">
+
                         View on GitHub →
+
                     </a>
 
                 </div>
+
 
 
                 <!-- PROJECT 2 -->
@@ -958,37 +1473,63 @@
                         PROJECT 02
                     </div>
 
+
                     <h3>
                         CineSuggest
                     </h3>
 
+
                     <p>
+
                         Developed a machine learning-based movie
                         recommendation system that suggests relevant
                         movies based on user preferences and integrates
-                        TMDB API to retrieve live movie information
+                        the TMDB API to retrieve live movie information
                         and posters.
+
                     </p>
+
 
                     <div class="tech-stack">
 
-                        <span class="tech">Python</span>
-                        <span class="tech">Machine Learning</span>
-                        <span class="tech">Pandas</span>
-                        <span class="tech">Scikit-learn</span>
-                        <span class="tech">TMDB API</span>
-                        <span class="tech">Streamlit</span>
+                        <span class="tech">
+                            Python
+                        </span>
+
+                        <span class="tech">
+                            Machine Learning
+                        </span>
+
+                        <span class="tech">
+                            Pandas
+                        </span>
+
+                        <span class="tech">
+                            Scikit-learn
+                        </span>
+
+                        <span class="tech">
+                            TMDB API
+                        </span>
+
+                        <span class="tech">
+                            Streamlit
+                        </span>
 
                     </div>
+
 
                     <a
                         href="https://github.com/dishaa-a"
                         target="_blank"
                         class="project-link">
+
                         View on GitHub →
+
                     </a>
 
                 </div>
+
 
 
                 <!-- PROJECT 3 -->
@@ -999,35 +1540,58 @@
                         PROJECT 03
                     </div>
 
+
                     <h3>
                         Rock vs Mine Predictor
                     </h3>
 
+
                     <p>
+
                         Developed a binary classification model using
                         sonar signal data to distinguish between rocks
                         and mines. Implemented preprocessing and
                         machine learning techniques using Scikit-learn.
+
                     </p>
+
 
                     <div class="tech-stack">
 
-                        <span class="tech">Python</span>
-                        <span class="tech">Scikit-learn</span>
-                        <span class="tech">Pandas</span>
-                        <span class="tech">NumPy</span>
-                        <span class="tech">Classification</span>
+                        <span class="tech">
+                            Python
+                        </span>
+
+                        <span class="tech">
+                            Scikit-learn
+                        </span>
+
+                        <span class="tech">
+                            Pandas
+                        </span>
+
+                        <span class="tech">
+                            NumPy
+                        </span>
+
+                        <span class="tech">
+                            Classification
+                        </span>
 
                     </div>
+
 
                     <a
                         href="https://github.com/dishaa-a"
                         target="_blank"
                         class="project-link">
+
                         View on GitHub →
+
                     </a>
 
                 </div>
+
 
             </div>
 
@@ -1036,13 +1600,19 @@
     </section>
 
 
-    <!-- ================= SKILLS ================= -->
+
+    <!-- =====================================================
+         SKILLS
+    ====================================================== -->
 
     <section id="skills">
 
         <div class="section-container">
 
-            <p class="section-label">// 04 — SKILLS</p>
+            <p class="section-label">
+                // 04 — SKILLS
+            </p>
+
 
             <h2 class="section-title">
                 Technical toolkit.
@@ -1135,6 +1705,7 @@
 
                 </div>
 
+
             </div>
 
         </div>
@@ -1142,13 +1713,19 @@
     </section>
 
 
-    <!-- ================= EDUCATION ================= -->
+
+    <!-- =====================================================
+         EDUCATION
+    ====================================================== -->
 
     <section id="education">
 
         <div class="section-container">
 
-            <p class="section-label">// 05 — EDUCATION</p>
+            <p class="section-label">
+                // 05 — EDUCATION
+            </p>
+
 
             <h2 class="section-title">
                 Academic background.
@@ -1161,25 +1738,37 @@
                     Bachelor of Technology — CSE (Artificial Intelligence)
                 </h3>
 
+
                 <div class="institution">
                     Maharaja Agrasen Institute of Technology (GGSIPU)
                 </div>
 
+
                 <div class="education-meta">
+
                     CGPA: <strong>8.95</strong>
+
                     &nbsp; · &nbsp;
+
                     2023 — 2027
+
                 </div>
 
             </div>
 
 
-            <h2 class="section-title" style="margin-top:60px;">
+
+            <h2
+                class="section-title"
+                style="margin-top:60px;">
+
                 Certifications.
+
             </h2>
 
 
             <div class="certifications">
+
 
                 <div class="cert-card">
 
@@ -1219,6 +1808,7 @@
 
                 </div>
 
+
             </div>
 
         </div>
@@ -1226,7 +1816,10 @@
     </section>
 
 
-    <!-- ================= LOOKING FOR ================= -->
+
+    <!-- =====================================================
+         LOOKING FOR
+    ====================================================== -->
 
     <section>
 
@@ -1238,17 +1831,21 @@
                     // CURRENTLY LOOKING FOR
                 </p>
 
+
                 <h3>
                     Ready to learn, build & contribute.
                 </h3>
 
+
                 <p>
+
                     I am currently looking for internship opportunities
                     in <strong>Artificial Intelligence, Machine Learning,
                     Data Science, Generative AI, or related roles</strong>
                     where I can apply my existing skills, work on
                     real-world problems, learn from experienced teams,
                     and contribute to meaningful projects.
+
                 </p>
 
             </div>
@@ -1258,17 +1855,26 @@
     </section>
 
 
-    <!-- ================= CONTACT ================= -->
 
-    <section id="contact">
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section
+        id="contact"
+        class="contact-section">
 
         <div class="section-container">
 
-            <p class="section-label">// 06 — CONTACT</p>
+            <p class="section-label">
+                // 06 — CONTACT
+            </p>
+
 
             <h2 class="section-title">
                 Let's build something useful.
             </h2>
+
 
             <p class="section-description">
 
@@ -1278,28 +1884,32 @@
 
             </p>
 
-            <div class="contact-row">
 
-                <a class="contact-item"
-                   href="mailto:dishachaudhary61112@gmail.com">
+            <div class="contact-row" style="margin-top:25px;">
+
+                <a
+                    href="mailto:dishachaudhary61112@gmail.com"
+                    class="contact-item">
 
                     ✉ Email Me
 
                 </a>
 
 
-                <a class="contact-item"
-                   href="https://www.linkedin.com/in/disha-chaudhary2003"
-                   target="_blank">
+                <a
+                    href="https://www.linkedin.com/in/disha-chaudhary2003"
+                    target="_blank"
+                    class="contact-item">
 
                     LinkedIn →
 
                 </a>
 
 
-                <a class="contact-item"
-                   href="https://github.com/dishaa-a"
-                   target="_blank">
+                <a
+                    href="https://github.com/dishaa-a"
+                    target="_blank"
+                    class="contact-item">
 
                     GitHub →
 
@@ -1312,148 +1922,25 @@
     </section>
 
 
-    <!-- ================= FOOTER ================= -->
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
     <footer>
 
         <p>
-            © 2026 <strong>Disha Chaudhary</strong>.
+
+            © 2026
+            <strong>Disha Chaudhary</strong>.
+
             Built with curiosity, code & AI.
+
         </p>
 
     </footer>
 
 
-    <!-- ================= NETWORK ANIMATION ================= -->
-
-    <script>
-
-        const canvas = document.getElementById("networkCanvas");
-        const ctx = canvas.getContext("2d");
-
-        let width;
-        let height;
-
-        const nodes = [];
-
-        function resizeCanvas() {
-
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
-
-        }
-
-        resizeCanvas();
-
-        window.addEventListener("resize", resizeCanvas);
-
-
-        for (let i = 0; i < 55; i++) {
-
-            nodes.push({
-
-                x: Math.random() * window.innerWidth,
-
-                y: Math.random() * window.innerHeight,
-
-                vx: (Math.random() - 0.5) * 0.35,
-
-                vy: (Math.random() - 0.5) * 0.35,
-
-                radius: Math.random() * 1.7 + 0.7
-
-            });
-
-        }
-
-
-        function animateNetwork() {
-
-            ctx.clearRect(0, 0, width, height);
-
-
-            nodes.forEach(node => {
-
-                node.x += node.vx;
-                node.y += node.vy;
-
-
-                if (node.x < 0 || node.x > width) {
-                    node.vx *= -1;
-                }
-
-                if (node.y < 0 || node.y > height) {
-                    node.vy *= -1;
-                }
-
-
-                ctx.beginPath();
-
-                ctx.arc(
-                    node.x,
-                    node.y,
-                    node.radius,
-                    0,
-                    Math.PI * 2
-                );
-
-                ctx.fillStyle = "rgba(100,216,255,0.65)";
-
-                ctx.fill();
-
-            });
-
-
-            for (let i = 0; i < nodes.length; i++) {
-
-                for (let j = i + 1; j < nodes.length; j++) {
-
-                    const dx = nodes[i].x - nodes[j].x;
-                    const dy = nodes[i].y - nodes[j].y;
-
-                    const distance = Math.sqrt(
-                        dx * dx + dy * dy
-                    );
-
-
-                    if (distance < 150) {
-
-                        const opacity =
-                            (1 - distance / 150) * 0.18;
-
-                        ctx.beginPath();
-
-                        ctx.moveTo(
-                            nodes[i].x,
-                            nodes[i].y
-                        );
-
-                        ctx.lineTo(
-                            nodes[j].x,
-                            nodes[j].y
-                        );
-
-                        ctx.strokeStyle =
-                            `rgba(100,216,255,${opacity})`;
-
-                        ctx.lineWidth = 1;
-
-                        ctx.stroke();
-
-                    }
-
-                }
-
-            }
-
-
-            requestAnimationFrame(animateNetwork);
-
-        }
-
-        animateNetwork();
-
-    </script>
-
 </body>
+
 </html>
